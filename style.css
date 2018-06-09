@@ -1,0 +1,442 @@
+body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 30px;
+}
+
+/*+++++++++Header++++++++++
+++++++++++++++++++++++++++*/
+
+.header{
+    height:85vh;
+    background-color: #eee;
+    background-size: cover;
+    background-image:linear-gradient(to right bottom,rgba(32,100,202,0.7),rgba(17,7,17,0.7)),url(luca-bravo-121931-unsplash.jpg);
+    background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+}
+.heading-primary{
+    color: #fff;
+}
+.text-box{
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+.heading-primary-main{
+    display: block;
+    letter-spacing: 35px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 60px;
+    animation-name: MoveToLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+.heading-primary-sub{
+    display: block;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    animation-name:  MoveToRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+/*++Animation of the header++++*/
+@keyframes MoveToLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    
+    80%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes MoveToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+/*++++++++++++++++++++++++++++++++++++
++++++++++++++++END++++++++++++++++++++++++++*/
+
+
+/*++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++About section++++++++++++*/
+.section_about{
+    background-color: #f7f7f7;
+    padding: 15rem 0;
+    margin: -25vh;
+    
+}
+.about{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    top:95%;
+    left: 40%;
+    letter-spacing: 3px;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,rgba(32,100,202,0.7),rgba(17,7,17,0.7));
+     -webkit-background-clip:text;
+    color: transparent;
+}
+.about-as{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.CustomDiv{
+    margin: 3px;
+    min-height: 360px;
+/*    background-color: aquamarine;*/
+    text-align: center;
+}
+.CustomDivFF{
+    margin: 3px;
+    min-height: 360px;
+/*    background-color: aqua;*/
+    text-align: center;
+}
+.heading-tertiary{
+    font-size:1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: .9rem;
+    
+    
+}
+.paragraph:not(:last-child){
+        margin-bottom: 6rem;
+    }
+
+/*+++++++++photo of the about section+++++++*/
+.composition{
+    position: relative;
+    
+}
+.composition_photo{
+    width:55%;
+    height: auto;
+    box-shadow: 0 1rem 4rem rgba(0,0,0,.2);
+    border-radius: 1px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 1rem;
+    }
+.composition_photo_p1{
+    left: 0;
+    top:-2rem;
+}
+.composition_photo_p2{
+    right: 0;
+    top: 2rem;
+}
+.composition_photo_p3{
+    left: 20%;
+    top: 10rem;
+}
+.composition_photo:hover{
+    outline: 1rem solid rgba(32,100,202);
+    transform: scale(1.05);
+    box-shadow: 0 2rem 4rem rgba(0,0,0,.6);
+    z-index: 20;
+}
+.composition:hover .composition_photo:not(:hover){
+    transform: scale(.95);
+}
+/*+++++++++++END+++++++++++++++++++++*/
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++
+++++++++++++++Cards++++++++++++++++++*/
+
+.rooms{
+    height: 105vh;
+    background-color: #eee;
+    
+}
+.card_details{
+    padding 20rem;
+    margin-top: 60px;
+    margin-left: 360px;
+    margin-bottom: 40px;
+  
+}
+.details{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,rgba(32,100,202,0.7),rgba(17,7,17,0.7));
+     -webkit-background-clip:text;
+    color: transparent;
+    text-align: center;
+    
+    
+}
+
+.card_slider {
+    margin-left: 170px;
+}
+.card{
+    min-height: 425px;
+    perspective: 150rem;
+    -moz-perspective:150rem;
+     position: relative;
+  
+    
+    
+   
+}
+.card__side{
+   
+     min-height: 425px;
+     border-radius:0px;
+     text-align: center;
+     transition: all .9s;
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 100%;
+     border-radius:3px;
+     backface-visibility: hidden;
+     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 1,.15);
+     overflow: hidden;
+    
+    
+}
+.card__side--font{
+}
+.card__side--back{
+     background-image: linear-gradient(to right bottom,rgba(32,100,202,0.7),rgba(17,7,17,0.2));
+    transform: rotateY(180deg);
+}
+
+
+ 
+.card:hover .card__side--font{
+    transform: rotateY(180deg);
+}
+.card:hover .card__side--back{
+    transform: rotateY(0deg);
+}
+/*font side image styling*/
+
+.card_image{
+    background-size: cover;
+    height: 13rem;
+    background-blend-mode:lighten;
+    clip-path:polygon(0 0,100% 0,100% 80%,0 100%);
+    -webkit-clip-path:polygon(0 0,100% 0,100% 80%,0 100%);
+}
+.card_image--p1{
+    background-image: linear-gradient(to right bottom,rgba(32,100,202,0.7),rgba(17,7,17,0.2)), 
+                      url(img/DSC_0381_w.jpg);
+}
+.card_image--p2{
+    background-image: linear-gradient(to right bottom, rgba(32,100,202,0.7),rgba(17,7,17,0.2)), 
+                      url(img/hotel-sonar-bangla-darjeeling.jpg);
+}.card_image--p3{
+    background-image: linear-gradient(to right bottom, rgba(32,100,202,0.7),rgba(17,7,17,0.2)), 
+                      url(img/hotel-sonar-bangla-darjeeling.jpg);
+}
+.card_image--p4{
+    background-image: linear-gradient(to right bottom, rgba(32,100,202,0.7),rgba(17,7,17,0.2)), 
+                      url(img/hotel-sonar-bangla-darjeeling.jpg);
+}
+/*back side style*/
+.card_heading_details ul{
+    list-style: none; 
+    width: 80%;
+}
+.card_heading_details li{
+    text-align: center;
+    font-size: 1rem;
+    padding:1rem;  
+}
+.card_heading_details:not(:last-child){
+    border-bottom: 1px solid #000;
+}
+.card_cta{
+    position: absolute;
+    top:50%;
+    left: 50%;  
+    transform: translate( -50% ,-50%);
+    width:90%;
+}
+.card_price-box{
+    text-align: center;
+    color: #fff;
+}
+.card_price-only{
+    
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.card_price-value{
+    font-size: 4rem;
+    font-weight: 100;
+}
+.btn:link,
+ btn:visited{
+    text-transform: uppercase;
+     text-decoration: none;
+     padding: 12px 37px;
+     display: inline-block;
+     border-radius: 100px;
+     transition: all .3s;
+     
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.btn:active{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 30px rgba(0,0,0,.2);
+}
+.btn-white{
+    background-color: white;
+    color: #777;
+    
+}
+.main-button{
+    margin-top: 30px;
+    text-align: center;
+}
+/*++++++++++++END OF CARD SECTION++++++++++++*/
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++WHY AS+++++++++++++++++++++++++*/
+.why-as{
+    padding: 1px;
+    margin-left: 15px;
+    
+}
+.content-1{
+    width:35rem;
+    min-height:44rem; 
+     background-color: #eee;
+    background-size: cover;
+/*    background-image:linear-gradient(to bottom,rgba(0,0,0,0.5),rgba(17,7,17,0.7));*/
+     background: rgba(0, 0, 1,.8);
+    opacity: 1;
+    background-position: top;
+}
+.contain-text{
+    color: #fff;
+    text-align: center;
+}
+.heading-containt{
+    margin-top:50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight:700;
+    letter-spacing: 4px;
+    color: #fff;
+    font-size: 100px;
+    
+}
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.content-paragraph-1{
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 18px;
+    margin: 0;
+}
+.content-paragraph-2{
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 18px;
+}
+/*+++++++++++slider-image+++++++++*/
+.content-image{
+    width:10rem;
+    min-height: 44rem;
+    background-color: aquamarine;
+    background-size: cover; 
+}
+ul,li,img{
+    margin: 0;
+   padding: 0;
+}
+.auto-slider img{
+    display: block;
+}
+.auto-slider{
+    outline: 1px solid red;
+    width: 672px;
+    height: 704px;
+    overflow-x: hidden;
+   
+    
+}
+.auto-slider_content{
+
+    list-style: none;
+    display: flex;
+    position: relative;
+    animation-name: slide;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+   
+}
+.auto-slider_content:hover{
+    animation-play-state: paused;
+}
+@keyframes slide{
+    10%{
+        transform: translateX(0);
+    }
+    15%,30%{
+        transform: translateX(-672px);
+    }
+   35%,50%{
+        transform: translateX(-1344px);
+    }
+    55%,70%{
+        transform: translateX(-2016px);
+    }
+    75%,90%{
+        transform: translateX(0);
+    }       
+}
+/*++++++++END++++++++++++++=++++*/
+
+

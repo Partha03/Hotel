@@ -1,0 +1,27 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.rooms_list{
+    background-color: chartreuse;
+    min-height: 300px;
+}
+.room_view{
+    background-color: aquamarine;
+    min-height:100%;
+        
+}
+.rooms{
+    background-color: antiquewhite;
+    min-height: 260px;
+    margin-top: 20px;
+
+}
+.rooms-content{
+    background-color: blue;
+    min-height: 260px;
+    margin-top: 20px;
+  
+}
+
+
